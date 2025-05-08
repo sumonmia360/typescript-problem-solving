@@ -68,7 +68,7 @@ Are you ready to improve your typescript code? If so, use the above tips in your
 
 ---
 
-# Explain the difference between any, unknown, and never types in TypeScript.
+# Difference between any, unknown, and never types in TypeScript.
 
 ### Introduction
 
