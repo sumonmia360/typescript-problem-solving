@@ -51,10 +51,45 @@
   }
 
   const myCar = new Car("Toyota", 2020, "Corolla");
-  console.log(myCar.getInfo());
-  console.log(myCar.getModel());
+  //   console.log(myCar.getInfo());
+  //   console.log(myCar.getModel());
 
   //==
+  //   function concatenateArrays<T>(...arrays: T[][]) {
+
+  //   }
+
+  //   const makeConcatenat = concatenateArrays(["a", "b"], ["c"]);
+  //   console.log(makeConcatenat);
+  //==
+
+  interface Product {
+    name: string;
+    price: number;
+  }
+
+  function getMostExpensiveProduct(products: Product[]): Product | null {
+    if (!products.length) {
+      return null;
+    } else {
+      let bigPice: number = 0;
+      let finalObj: any;
+      for (let i = 0; i < products.length; i++) {
+        if (products[i].price > bigPice) {
+          bigPice = products[i].price;
+          finalObj = products[i];
+        }
+      }
+      return finalObj;
+    }
+  }
+  const products = [
+    { name: "Pen", price: 110 },
+    { name: "Notebook", price: 25 },
+    { name: "Bag", price: 50 },
+  ];
+  const checkTheMostExpensivePro = getMostExpensiveProduct(products);
+  console.log(checkTheMostExpensivePro);
 
   ///
 }
