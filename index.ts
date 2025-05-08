@@ -29,6 +29,16 @@
   ];
   filterByRating(books);
 
+  function concatenateArrays<T>(...arrays: T[][]): T[] {
+    let newArray: any = [];
+    for (let i = 0; i < arrays.length; i++) {
+      newArray = newArray.concat(arrays[i]);
+    }
+    return newArray;
+  }
+  concatenateArrays(["a", "b"], ["c"]);
+  concatenateArrays([1, 2], [3, 4], [5]);
+
   class Vehicle {
     private make: string;
     private year: number;
