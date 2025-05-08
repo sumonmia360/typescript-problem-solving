@@ -97,7 +97,7 @@
     }
   }
   const products = [
-    { name: "Pen", price: 110 },
+    { name: "Pen", price: 10 },
     { name: "Notebook", price: 25 },
     { name: "Bag", price: 50 },
   ];
