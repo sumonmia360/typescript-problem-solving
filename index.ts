@@ -1,5 +1,4 @@
 {
-  //==
   function formatString(input: string, toUpper?: boolean): string {
     if (input && toUpper === true) {
       return input.toUpperCase();
@@ -9,24 +8,27 @@
       return input.toUpperCase();
     }
   }
+  formatString("Hello");
 
-  const formatStringCheck = formatString("sumon");
-  //   console.log(formatStringCheck);
-
-  //==
-
-  function processValue(value: string | number): number {
-    if (typeof value === "string") {
-      return value.length;
-    } else {
-      return value * 2;
+  function filterByRating(
+    items: { title: string; rating: number }[]
+  ): { title: string; rating: number }[] {
+    let filteringArray: any = [];
+    for (let i = 0; i < items.length; i++) {
+      if (items[i].rating >= 4) {
+        filteringArray.push(items[i]);
+      }
     }
+    return filteringArray;
   }
 
-  const processValueCheck = processValue(10);
-  //   console.log(processValueCheck);
+  const books = [
+    { title: "Book A", rating: 4.5 },
+    { title: "Book B", rating: 3.2 },
+    { title: "Book C", rating: 5.0 },
+  ];
+  filterByRating(books);
 
-  //==
   class Vehicle {
     private make: string;
     private year: number;
@@ -51,17 +53,18 @@
   }
 
   const myCar = new Car("Toyota", 2020, "Corolla");
-  //   console.log(myCar.getInfo());
-  //   console.log(myCar.getModel());
+  myCar.getInfo();
+  myCar.getModel();
 
-  //==
-  //   function concatenateArrays<T>(...arrays: T[][]) {
-
-  //   }
-
-  //   const makeConcatenat = concatenateArrays(["a", "b"], ["c"]);
-  //   console.log(makeConcatenat);
-  //==
+  function processValue(value: string | number): number {
+    if (typeof value === "string") {
+      return value.length;
+    } else {
+      return value * 2;
+    }
+  }
+  processValue("hello");
+  processValue(10);
 
   interface Product {
     name: string;
@@ -88,9 +91,8 @@
     { name: "Notebook", price: 25 },
     { name: "Bag", price: 50 },
   ];
-  const checkTheMostExpensivePro = getMostExpensiveProduct(products);
-  //   console.log(checkTheMostExpensivePro);
-  //==
+  getMostExpensiveProduct(products);
+
   enum Day {
     Monday,
     Tuesday,
@@ -102,13 +104,12 @@
   }
 
   function getDayType(day: Day): string {
-    if (day == Day.Sunday) {
+    if (day == Day.Sunday || day == Day.Saturday) {
       return "Weekend";
     } else {
       return "WeekDay";
     }
   }
-  const checkExatDay = getDayType(Day.Sunday); // Output: "Weekday"
-  console.log(checkExatDay);
-  ///
+  getDayType(Day.Monday);
+  getDayType(Day.Sunday);
 }
