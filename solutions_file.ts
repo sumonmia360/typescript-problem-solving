@@ -89,7 +89,26 @@
     { name: "Bag", price: 50 },
   ];
   const checkTheMostExpensivePro = getMostExpensiveProduct(products);
-  console.log(checkTheMostExpensivePro);
+  //   console.log(checkTheMostExpensivePro);
+  //==
+  enum Day {
+    Monday,
+    Tuesday,
+    Wednesday,
+    Thursday,
+    Friday,
+    Saturday,
+    Sunday,
+  }
 
+  function getDayType(day: Day): string {
+    if (day == Day.Sunday) {
+      return "Weekend";
+    } else {
+      return "WeekDay";
+    }
+  }
+  const checkExatDay = getDayType(Day.Sunday); // Output: "Weekday"
+  console.log(checkExatDay);
   ///
 }
