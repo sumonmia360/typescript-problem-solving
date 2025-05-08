@@ -16,23 +16,47 @@ So there are many built-in solutions in TypeScript in Script which will help you
 
 ### 1.Leverage Strict Typing Options
 
+The TypeScript compiler gives you a much higher level of type checking. Setting "strict": true in your tsconfig.json is a great starting point, but there are additional alternatives that can be even better, such as
+
+- noImplicitAny
+- strictNullChecks
+- strictFunctionTypes
+
 ### 2.Use Types and Interfaces Wisely
+
+Use types and interfaces well. By using interfaces, you can easily understand the types of object properties, which will help you take the next step. Type and use them immediately.
 
 ### 3.Prefer unknown Over any
 
+It is much better to use unknown type than any type because using any type usually ruins the essence of typisty, so use unknown type well, it will make it easier to do well.
+
 ### 4.Use Readonly and Immutable Types for Safety
+
+Use read only and imu tables. It provides type safety and helps your code from any kind of rewriting. It has many benefits. It is reflected step by step.
 
 ### 5.Define Utility Types for Reusability
 
+TypeScript has some built-in functionalities and utilities that, if used, will greatly reduce your coding time and greatly help in making your code more responsive.
+
 ### 6.Define Return Types Explicitly
+
+Remember that if you specify the return type, the typing will understand how the function should work, meaning when it takes input, it will understand the input better and will be able to easily output it error-free.
 
 ### 7.Handle Null and Undefined Safely
 
+Null and untifine are actually good, use them well. We know there is a null operator in TypeScript, so handle null and untifine with that. The code will be easier.
+
 ### 8.Utilize Enum for Meaningful Values
+
+Use the concept called enum in typing scripts. Using enum will create a set of constants that will help you use unexpected numbers or strings. Try to use it a lot.
 
 ### 9.Use never for Exhaustive Checks
 
+Try to work exhaustively with the never type. The never type does not return anything, but in many cases, using it can give you ideas for different solutions, so try to use the never type correctly.
+
 ### 10.Keep Functions Pure and Concise
+
+When you use a function, try to make every point of the function very clear and every type correct, so that your function works at a much purer level. So, whenever you use a function, try to use a meaningful function name and use as short a logic as possible, so that the function runs easily.
 
 ### Conclusion
 
