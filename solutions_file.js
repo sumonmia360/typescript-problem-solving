@@ -1,0 +1,2 @@
+//
+function formatString(input, toUpper) { }
